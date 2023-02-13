@@ -3,18 +3,11 @@ using MongoDB.Bson;
 
 namespace Domain.Entities.Base
 {
-    public abstract class Document : IDocument
-    {
-        public ObjectId Id { get; set; }
-        public DateTime CreatedAt => Id.CreationTime;
-    }
-
-    public interface IDocument
+    public abstract class Document
     {
         [BsonId]
         [BsonRepresentation(BsonType.String)]
-        ObjectId Id { get; set; }
-
-        DateTime CreatedAt { get; }
+        public ObjectId Id { get; set; }
+        public DateTime CreatedAt => Id.CreationTime;
     }
 }
