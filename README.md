@@ -1,3 +1,3 @@
 # Products
 
-.Net Core 7 Project
+.Net Core 7 with Mongo DB
